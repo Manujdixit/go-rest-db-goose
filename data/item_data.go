@@ -1,9 +1,8 @@
-// repositories/item_repository.go
-package repositories
+package data
 
 import "github.com/manujdixit/go-rest-db-goose/entities"
 
-type ItemRepository interface {
+type ItemData interface {
 	GetAll() ([]entities.Item, error)
 	GetByID(id int) (entities.Item, error)
 	Create(item entities.Item) (int, error)

@@ -1,16 +1,15 @@
-// usecases/item_usecase.go
 package usecases
 
 import (
+	"github.com/manujdixit/go-rest-db-goose/data"
 	"github.com/manujdixit/go-rest-db-goose/entities"
-	"github.com/manujdixit/go-rest-db-goose/repositories"
 )
 
 type ItemUseCase struct {
-	repo repositories.ItemRepository
+	repo data.ItemData
 }
 
-func NewItemUseCase(repo repositories.ItemRepository) *ItemUseCase {
+func NewItemUseCase(repo data.ItemData) *ItemUseCase {
 	return &ItemUseCase{repo: repo}
 }
 

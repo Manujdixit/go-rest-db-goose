@@ -1,17 +1,17 @@
-package infrastructure
+package storage
 
 import (
 	"database/sql"
 
+	"github.com/manujdixit/go-rest-db-goose/data"
 	"github.com/manujdixit/go-rest-db-goose/entities"
-	"github.com/manujdixit/go-rest-db-goose/repositories"
 )
 
 type MySQLItemRepository struct {
 	DB *sql.DB
 }
 
-func NewMySQLItemRepository(db *sql.DB) repositories.ItemRepository {
+func NewMySQLItemRepository(db *sql.DB) data.ItemData {
 	return &MySQLItemRepository{DB: db}
 }
 
